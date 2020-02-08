@@ -13,7 +13,7 @@ const NavBar = () => {
         alignItems: 'center',
         margin: '10px auto',
         height: '50px',
-        width: '20%',
+        width: '50%',
       }}
     >
       <NavBarLink path="/" page="Home"/>
