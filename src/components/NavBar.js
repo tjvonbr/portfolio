@@ -17,7 +17,7 @@ const NavBar = () => {
       }}
     >
       <NavBarLink path="/" page="Home"/>
-      <NavBarLink path="/about" page="About Me" />
+      <NavBarLink path="/aboutme" page="About Me" />
       <NavBarLink path="/contact" page="Contact" />
     </div>
   )

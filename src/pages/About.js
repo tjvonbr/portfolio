@@ -1,10 +1,17 @@
+/** @jsx jsx **/
+
 import React from 'react';
 import Navbar from '../components/NavBar';
-import NavBarLink from '../components/NavBarLink';
+import { jsx, css } from '@emotion/core';
 
 const About = () => {
   return (
-    <div>
+    <div
+      css={{
+        width: '800px',
+        margin: '0px auto',
+      }}
+    >
       <Navbar />
     </div>
   )
