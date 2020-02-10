@@ -6,7 +6,7 @@ import { jsx, css } from '@emotion/core';
 
 const Contact = () => {
   return (
-    <div
+    <div 
       css={{
         width: '800px',
         margin: '0px auto',
