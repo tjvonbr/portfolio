@@ -8,19 +8,22 @@ import About from '../src/pages/About';
 import Contact from '../src/pages/Contact';
 import Home from '../src/pages/Home';
 import Projects from '../src/pages/Projects';
+import ProjectData from '../src/data/ProjectData'
 import './App.css';
 
-function App() {
+const App = () => {
+  const projects = ProjectData
+  const comake = projects.comake
+
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/aboutme">
-          <About />
-        </Route>
-        <Route path="/projects">
-          <Projects />
-        </Route>
+        <Route path="/aboutme" component={About} />
+        <Route path="/projects/comake"
+          render={(props) =>  (<Projects {...props} data={comake} />)
+          }
+        />
         <Route path="/contact">
           <Contact />
         </Route>

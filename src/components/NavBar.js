@@ -11,13 +11,14 @@ const NavBar = () => {
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
+        borderBottom: '1px solid black',
         margin: '10px auto',
         height: '50px',
         width: '50%',
       }}
     >
-      <NavBarLink path="/" page="Home"/>
-      <NavBarLink path="/aboutme" page="About Me" />
+      <NavBarLink path="/aboutme" page="About" />
+      <NavBarLink path="/projects/comake" page="Projects"/>
       <NavBarLink path="/contact" page="Contact" />
     </div>
   )
