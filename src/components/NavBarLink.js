@@ -1,12 +1,12 @@
 /** @jsx jsx **/
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { jsx, css } from '@emotion/core';
+import { NavLink } from 'react-router-dom';
+import { jsx } from '@emotion/core';
 
 const NavBarLink = props => {
   return (
-    <Link to={props.path} 
+    <NavLink to={props.path} 
       css={{
         color: 'black',
         textDecoration: 'none',
@@ -18,7 +18,7 @@ const NavBarLink = props => {
       }}
     >
       {props.page}
-    </Link>
+    </NavLink>
   )
 };
 

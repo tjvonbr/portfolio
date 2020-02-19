@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { jsx, css, keyframes } from '@emotion/core';
+import { jsx, keyframes } from '@emotion/core';
 
 const fadeOut = keyframes`
   100% {opacity: 1;}
@@ -46,7 +46,7 @@ const Home = () => {
                 textDecoration: 'underline',
               }
             }}
-          >About Me</Link>
+          >About</Link>
           <Link to="/projects"
             css = {{
               color: 'black',

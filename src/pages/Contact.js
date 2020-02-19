@@ -2,7 +2,7 @@
 
 import React from 'react';
 import NavBar from '../components/NavBar';
-import { jsx, css } from '@emotion/core';
+import { jsx } from '@emotion/core';
 
 const Contact = () => {
   return (
