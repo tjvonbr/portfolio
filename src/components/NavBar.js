@@ -18,7 +18,7 @@ const NavBar = () => {
       }}
     >
       <NavBarLink path="/aboutme" page="About" />
-      <NavBarLink path="/projects/comake" page="Projects"/>
+      <NavBarLink exact path="/projects/comake" page="Projects"/>
       <NavBarLink path="/contact" page="Contact" />
     </div>
   )

@@ -9,9 +9,12 @@ const ProjectContainer = ({data}) => {
   return (
     <div css={{
       height: '100%',
-      paddingLeft: '10px'
+      border: '1px solid black',
+      padding: '10px 10px'
+
     }}>
-      <h3 css={{textDecoration: 'underline'}}>{data.title}</h3>
+      <h3 css={{textDecoration: 'underline', marginBottom: '0px'}}>{data.title}</h3>
+      <p css={{margin: '0px'}}>{data.date}</p>
 
       <p><strong>Summary: </strong>{data.summary}</p>
 
@@ -23,8 +26,6 @@ const ProjectContainer = ({data}) => {
          <li>{highlight}</li>
       ))}
       </ul>
-
-      <a href={data.link} target="_blank">Check out my code!</a>
 
     </div>
   )

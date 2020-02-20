@@ -8,20 +8,26 @@ const About = () => {
   return (
     <div
       css={{
-        width: '800px',
+        maxWidth: '800px',
         margin: '0px auto',
       }}
     >
       <Navbar />
       
-      <div>
-        <h1>About Me</h1>
+      <div
+        css={{
+          maxWidth: '800px',
+          position: 'fixed',
+          top: '40%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        }}
+      >
 
-        <p>Hello!  I'm Trevor Von Bruenchenhein, and if you're reading this, you must've found my personal site.  I'm a full-stack engineer with an interest in how software and education best complement each other.</p>
+        <p style={{fontSize: '2.4rem', fontWeight: 'bold'}}>Hello!  I'm Trevor Von Bruenchenhein!</p>
 
-        <p>My technical skills include:  JavaScript, React, Gatsby, Redux, React Native, HTML, CSS, Node, Express, Python, Django & Flask</p>
+        <p>I am a Chicago-based full-stack engineer with a background in education and software development.  After teaching high school history for five years, I wanted to approach education from a different angle and decided to pursue studying web development full-time.  Because of my experience in the classroom, I understand how valuable educational technology is in an increasingly digital world, and I’m ready to start working on a project that is going to transform the educational experience for students around the world.</p>
 
-        <p>If you want to read more, head over to the contact page, and if you'd like to see some of the projects I helped build, check out the projects link!</p>
       </div>
     </div>
   )
