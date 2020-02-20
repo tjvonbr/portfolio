@@ -20,7 +20,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route path="/aboutme" component={About} />
-        <Route path="/projects/comake"
+        <Route exact path="/projects/comake"
           render={(props) =>  (<Projects {...props} data={comake} />)
           }
         />

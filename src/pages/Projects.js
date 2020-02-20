@@ -17,7 +17,6 @@ const Projects = ({data}) => {
       <NavBar />
 
       <div>
-        <h1>Projects</h1>
         
         <p>Below is a compilation of projects I have worked on in various capacities during my time with Lambda and on my own time.  For each project, I wanted to explain what the project was intended to accomplish along with some of the skills and technologies that were practiced.  In addition, I link to the relevant github repo for each.  Enjoy!</p>
       </div>
@@ -28,7 +27,6 @@ const Projects = ({data}) => {
           height: '100%',
         }}
       >
-        <VerticalNavBar />
 
         <ProjectContainer data={data} />
       </div>

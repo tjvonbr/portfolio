@@ -1,8 +1,9 @@
 /** @jsx jsx **/
 
 import React from 'react';
-import NavBar from '../components/NavBar';
 import { jsx } from '@emotion/core';
+import NavBar from '../components/NavBar';
+import { SocialIcon } from 'react-social-icons';
 
 const Contact = () => {
   return (
@@ -14,15 +15,55 @@ const Contact = () => {
     >
       <NavBar />
 
-      <div>
-        <h1>Contact Me</h1>
+      <div
+        css={{
+          maxWidth: '800px',
+          width: '20%',
+          position: 'fixed',
+          top: '40%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
+        }}
+      >
+        <p style={{fontSize: '2.4rem', fontWeight: 'bold'}}>Reach out!</p>
 
-        <p css={{ fontStyle: 'normal' }}>If you'd like to contact me for any reason, please use the following mediums to do so.  I'm currently looking for projects to work on, so if you'd like to collaborate, shoot me an email at <strong>trevorvonbruenchenhein@gmail.com</strong>.
-        </p>
+        <p css={{marginBottom: '50px'}}>If you're interested in education, technology, or the intersection of the two, I'd love to hear from you!</p>
 
-        <p>You can also check out my <a href="https://www.linkedin.com/feed/" css={{ color: 'blue' }}>LinkedIn</a> and <a href="https://github.com/tjvonbr" css={{ color: 'blue' }}>GitHub</a> accounts.</p>
+        <div
+          css={{
+            width: '70%',
+            margin: 'auto',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignContent: 'center',
+          }}
+        >
+          <a href="https://www.linkedin.com/in/tjvonbr/" target="_blank">
+            <SocialIcon
+              network={'linkedin'}
+              bgColor={'black'}
+              fgColor={'white'}
+            />
+          </a>
+
+          <a href="https://www.github.com/tjvonbr/" target="_blank">
+            <SocialIcon
+              network={'github'}
+              bgColor={'black'}
+              fgColor={'white'}
+            />
+          </a>
+
+           <a href="mailto:trevorvonbruenchenhein@gmail.com" target="_blank">
+            <SocialIcon
+              network={'email'}
+              bgColor={'black'}
+              fgColor={'white'}
+            />
+           </a>
+
+        </div>
       </div>
-
     </div>
   )
 }

@@ -2,30 +2,34 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { jsx, keyframes } from '@emotion/core';
+import { jsx, css, keyframes } from '@emotion/core';
 
-const fadeOut = keyframes`
-  100% {opacity: 1;}
-  0% {opacity: 0;}
-`
+const linkStyle = css({
+  fontSize: '1.6rem',
+  color: 'black',
+  textDecoration: 'none',
+  padding: '0px',
+  margin: '0px 10px',
+  '&:hover': {
+    textDecoration: 'underline'
+  }
+})
 
 const Home = () => {
   return (
     <div>
       <div 
         css={{
-          margin: '0 auto',
-          width: '30%',
-          position: 'absolute',
-          top: '35%',
-          left: '37.5%',
-        }}
-      >
+          position: 'fixed',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        }}>
         <h1
           css={{
             borderBottom: '1px solid black',
             marginBottom: '0px',
-            textAlign: 'center'
+            textAlign: 'center',
           }}
         >Trevor Von Bruenchenhein</h1>
         <ul
@@ -37,41 +41,23 @@ const Home = () => {
           }}
         >
           <Link to="/aboutme"
-            css = {{
-              color: 'black',
-              textDecoration: 'none',
-              padding: '0px',
-              margin: '0px 10px',
-              '&:hover': {
-                textDecoration: 'underline',
-              }
-            }}
-          >About</Link>
-          <Link to="/projects"
-            css = {{
-              color: 'black',
-              textDecoration: 'none',
-              padding: '0px',
-              margin: '0px 10px',
-              '&:hover': {
-                textDecoration: 'underline',
-              }
-            }}
-          >Projects</Link>
+            css={linkStyle}
+          >About
+          </Link>
+
+          <Link to="/projects/comake"
+            css={linkStyle}
+          >Projects
+          </Link>
+
           <Link to="/contact"
-            css = {{
-                color: 'black', 
-                padding: '0px',
-                margin: '0px 10px',
-                textDecoration: 'none',
-                '&:hover': {
-                  textDecoration: 'underline',
-                }
-              }}
-          >Contact</Link>
+            css={linkStyle}
+          >Contact
+          </Link>
+          
         </ul>
       </div>
-  </div>
+    </div>
   )
 };
 
