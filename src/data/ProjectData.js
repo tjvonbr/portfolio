@@ -1,5 +1,6 @@
 export default {
   comake: {
+    id: "comake",
     title: "Co-Make",
     date: "August 2019",
     summary: "Wanderlust is an application that offers pre-packaged vacations to potential clients.  Instead of having to worry about planning out the vacation hour-by-hour, day-by-day, clients can outsource that task to Wanderlust and focus on the reason to take a vacation in the first place.",
@@ -13,6 +14,7 @@ export default {
   },
 
   wanderlust: {
+    id: "wanderlust",
     title: "Wanderlust",
     summary: "",
     role: "",
@@ -21,6 +23,7 @@ export default {
   },
 
   splitthebill: {
+    id: "splitthebill",
     title: "Split the Bill",
     summary: "",
     role: "",

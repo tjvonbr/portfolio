@@ -8,7 +8,7 @@ const NavBarLink = props => {
   return (
     <NavLink to={props.path} 
       css={{
-        fontSize: '1.8rem',
+        fontSize: `${props.fontSize}`,
         color: 'black',
         textDecoration: 'none',
         padding: '0px',
