@@ -1,12 +1,17 @@
 /** @jsx jsx **/
 
 import React from 'react';
+import { useRouteMatch } from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import { jsx, css } from '@emotion/core';
-import VerticalNavBar from '../components/VerticalNavBar';
-import ProjectContainer from '../components/ProjectContainer';
+import ProjectNavBar from '../components/ProjectNavBar';
+import ProjectData from '../data/ProjectData';
+import { jsx } from '@emotion/core';
 
-const Projects = ({data}) => {
+const Projects = (props) => {
+  let { path, url } = useRouteMatch();
+  const projects = ProjectData;
+  console.log("PROJECT DATA", projects)
+  
   return (
     <div
       css={{
@@ -15,20 +20,24 @@ const Projects = ({data}) => {
       }}
     >
       <NavBar />
-
-      <div>
-        
-        <p>Below is a compilation of projects I have worked on in various capacities during my time with Lambda and on my own time.  For each project, I wanted to explain what the project was intended to accomplish along with some of the skills and technologies that were practiced.  In addition, I link to the relevant github repo for each.  Enjoy!</p>
-      </div>
+      <ProjectNavBar {...props} 
+        url={url} 
+        path={path} 
+        projects={projects} 
+      />
 
       <div
         css={{
-          display: 'flex',
-          height: '100%',
+          maxWidth: '800px',
+          position: 'fixed',
+          top: '40%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)'
         }}
       >
+        <p style={{fontSize: '2.4rem', fontWeight: 'bold'}}>Check out my projects!</p>
 
-        <ProjectContainer data={data} />
+        <p>I've worked on many projects as a member of a distributed team--working with developers, data scientists, and UX designers from different backgrounds and experiences.  I've selected a few projects that I'm most proud of.</p>
       </div>
     </div>
   )

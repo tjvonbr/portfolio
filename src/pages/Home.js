@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { jsx, css, keyframes } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
 
 const linkStyle = css({
   fontSize: '1.6rem',
@@ -45,7 +45,7 @@ const Home = () => {
           >About
           </Link>
 
-          <Link to="/projects/comake"
+          <Link to="/projects"
             css={linkStyle}
           >Projects
           </Link>
