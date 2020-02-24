@@ -2,26 +2,37 @@
 
 import React from 'react';
 import Navbar from '../components/NavBar';
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
+import facepaint from 'facepaint';
+
+// Media queries
+const mq = facepaint([
+  '@media(min-width: 420px)',
+  '@media(min-width: 920px)',
+  '@media(min-width: 1120px)'
+], { literal: true }, { overlap: true })
 
 const About = () => {
   return (
     <div
-      css={{
-        maxWidth: '800px',
-        margin: '0px auto',
-      }}
-    >
+      css={mq({
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        height: '100vh',
+        justifyContent: 'center'
+      })}
+     >
       <Navbar />
       
       <div
-        css={{
-          maxWidth: '800px',
-          position: 'fixed',
-          top: '40%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-        }}
+        css={mq({
+          width: ['90%', '80%', '50%'],
+          alignSelf: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+        })}
       >
 
         <p style={{fontSize: '2.4rem', fontWeight: 'bold'}}>Hello!  I'm Trevor Von Bruenchenhein!</p>
@@ -31,6 +42,6 @@ const About = () => {
       </div>
     </div>
   )
-}
+};
 
 export default About;

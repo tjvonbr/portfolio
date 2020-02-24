@@ -10,7 +10,6 @@ import { jsx } from '@emotion/core';
 const Projects = (props) => {
   let { path, url } = useRouteMatch();
   const projects = ProjectData;
-  console.log("PROJECT DATA", projects)
   
   return (
     <div
