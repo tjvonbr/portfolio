@@ -10,8 +10,6 @@ import Project from '../components/Project';
 const fontSize = '1.6rem'
 
 const ProjectNavBar = props => {
-  console.log("PROJECTNAVBAR PROPS:", props)
-  
   return (
     <div
       css={{
@@ -41,12 +39,11 @@ const ProjectNavBar = props => {
         page="Split the Bill" 
         fontSize={fontSize} 
       />
-
       <Switch>
         <Route 
-          exact path={`${props.path}/:topicId`}
+          path={`${props.path}/:topicId`}
           component={Project}  
-         />
+        />
       </Switch>
     </div>
   )
