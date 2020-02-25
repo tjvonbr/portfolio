@@ -7,26 +7,26 @@ import facepaint from 'facepaint';
 
 // Media queries
 const mq = facepaint([
-  '@media(min-width: 420px)',
-  '@media(min-width: 920px)',
-  '@media(min-width: 1120px)'
-], { literal: true }, { overlap: true })
+  '@media(max-width: 1200px)',
+  '@media(max-width: 992px)',
+  '@media(max-width: 768px)'
+])
 
 const fontSize = '1.8rem'
 
 const NavBar = () => {
   return (
     <div
-      css={{
-        position: 'absolute',
-        top: '0px',
+      css={mq({
         display: 'flex',
+        position: ['absolute', 'absolute', 'relative'],
+        top: ['0px'],
+        width: ['20%', '35%', '50%'],
         justifyContent: 'space-around',
         alignItems: 'center',
-        alignSelf: 'center',
+        justifySelf: 'end',
         borderBottom: '1px solid black',
-        width: ['50%', '35%', '20%']
-      }}
+      })}
     >
       <NavBarLink path="/aboutme" page="About" fontSize={fontSize} />
       <NavBarLink path="/projects" page="Projects" fontSize={fontSize} />
