@@ -3,13 +3,22 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { jsx } from '@emotion/core';
+import facepaint from 'facepaint';
 
-const Project = ({ match, projects }) => {
-  console.log("MATCH", match, projects)
+// Media queries
+const mq = facepaint([
+  '@media(max-width: 1200px)',
+  '@media(max-width: 992px)',
+  '@media(max-width: 768px)'
+])
+
+const Project = ({projects, match}) => {
+  //
+  const project = projects.find(({ id }) => id === match.params.projectId)
 
   return (
     <div>
-      <h1>Title</h1>
+      <p>{ project.id }</p>
     </div>
   )
 }

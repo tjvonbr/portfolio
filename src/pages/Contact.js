@@ -4,26 +4,38 @@ import React from 'react';
 import { jsx } from '@emotion/core';
 import NavBar from '../components/NavBar';
 import { SocialIcon } from 'react-social-icons';
+import facepaint from 'facepaint';
+
+// Media queries
+const mq = facepaint([
+  '@media(max-width: 1200px)',
+  '@media(max-width: 992px)',
+  '@media(max-width: 768px)'
+])
 
 const Contact = () => {
   return (
     <div 
-      css={{
-        width: '800px',
-        margin: '0px auto',
-      }}
+      css={mq({
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: ['center', 'center', 'flex-start'],
+        alignItems: 'center',
+        backgroundColor: ['red', 'blue', 'yellow']
+      })}
     >
       <NavBar />
 
       <div
-        css={{
-          maxWidth: '800px',
-          width: '20%',
-          position: 'fixed',
-          top: '40%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)'
-        }}
+          css={mq({
+          width: ['30%', '50%', '92%'],
+          alignSelf: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+        })}
       >
         <p style={{fontSize: '2.4rem', fontWeight: 'bold'}}>Reach out!</p>
 
@@ -31,10 +43,10 @@ const Contact = () => {
 
         <div
           css={{
-            width: '70%',
+            width: '50%',
             margin: 'auto',
             display: 'flex',
-            justifyContent: 'space-between',
+            justifyContent: 'space-around',
             alignContent: 'center',
           }}
         >
