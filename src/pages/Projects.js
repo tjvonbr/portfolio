@@ -1,11 +1,9 @@
 /** @jsx jsx **/
 
 import React from 'react';
-import { useRouteMatch, Route, Switch } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import NavBarLink from '../components/NavBarLink';
-import Project from '../components/Project';
-import ProjectData from '../data/ProjectData';
 import { jsx, css } from '@emotion/core';
 import facepaint from 'facepaint';
 
@@ -31,7 +29,6 @@ const Projects = props  => {
         flexDirection: 'column',
         justifyContent: ['center', 'center', 'flex-start'],
         alignItems: 'center',
-        backgroundColor: ['lightcoral', 'blue', 'yellow']
       })}
     >
       <NavBar />
@@ -83,8 +80,6 @@ const Projects = props  => {
   
         <p>I've worked on many projects as a member of a distributed team--working with developers, data scientists, and UX designers from different backgrounds and experiences.  I've selected a few projects that I'm most proud of.</p>
       </div>
-
-      {/* <Route path={`${path}/:projectId`} render={() => <Project />} /> */}
 
     </div>
   )
