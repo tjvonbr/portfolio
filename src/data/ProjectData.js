@@ -1,5 +1,5 @@
-export default {
-  comake: {
+export default [
+ {
     id: "comake",
     title: "Co-Make",
     date: "August 2019",
@@ -13,7 +13,7 @@ export default {
     link: "https://github.com/tjvonbr/personal_split_the_bill"
   },
 
-  wanderlust: {
+  {
     id: "wanderlust",
     title: "Wanderlust",
     summary: "",
@@ -22,7 +22,7 @@ export default {
     link: ""
   },
 
-  splitthebill: {
+  {
     id: "splitthebill",
     title: "Split the Bill",
     summary: "",
@@ -30,4 +30,4 @@ export default {
     highlights: [],
     link: ""
   }
-}
+]

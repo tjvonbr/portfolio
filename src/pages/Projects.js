@@ -1,43 +1,91 @@
 /** @jsx jsx **/
 
 import React from 'react';
-import { useRouteMatch } from 'react-router-dom';
+import { useRouteMatch, Route, Switch } from 'react-router-dom';
 import NavBar from '../components/NavBar';
-import ProjectNavBar from '../components/ProjectNavBar';
+import NavBarLink from '../components/NavBarLink';
+import Project from '../components/Project';
 import ProjectData from '../data/ProjectData';
-import { jsx } from '@emotion/core';
+import { jsx, css } from '@emotion/core';
+import facepaint from 'facepaint';
 
-const Projects = (props) => {
-  let { path, url } = useRouteMatch();
-  const projects = ProjectData;
-  
+// Media queries
+const mq = facepaint([
+  '@media(max-width: 1200px)',
+  '@media(max-width: 992px)',
+  '@media(max-width: 768px)'
+])
+
+// Font size for subnavigation
+const fontSize = '1.6rem'
+
+const Projects = props  => {
+  const { path, url } = useRouteMatch();
+
   return (
     <div
-      css={{
-        width: '800px',
-        margin: '0px auto',
-      }}
+      css={mq({
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: ['center', 'center', 'flex-start'],
+        alignItems: 'center',
+        backgroundColor: ['lightcoral', 'blue', 'yellow']
+      })}
     >
       <NavBar />
-      <ProjectNavBar {...props} 
-        url={url} 
-        path={path} 
-        projects={projects} 
-      />
+
+      <nav
+        css={mq({
+          display: 'flex',
+          position: ['absolute', 'absolute', 'relative'],
+          top: ['40px'],
+          width: ['20%', '40%', '50%'],
+          justifyContent: 'space-around',
+          alignItems: 'flex-start',
+          margin: '0px auto',
+          height: '50px',
+
+        })}
+      >
+
+        <NavBarLink 
+          {...props}
+          path={`${url}/comake`}
+          page="Co-Make" 
+          fontSize={fontSize} 
+        />
+
+        <NavBarLink 
+          {...props}
+          path={`${url}/wanderlust`}
+          page="Wanderlust" 
+          fontSize={fontSize} 
+        />
+ 
+        <NavBarLink 
+          {...props}
+          path={`${url}/splitthebill`}
+          page="Split the Bill" 
+          fontSize={fontSize} 
+        />
+      </nav>
 
       <div
-        css={{
-          maxWidth: '800px',
-          position: 'fixed',
-          top: '40%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)'
-        }}
+        css={mq({
+          width: ['50%', '50%', '92%'],
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+        })}
       >
-        <p style={{fontSize: '2.4rem', fontWeight: 'bold'}}>Check out my projects!</p>
-
+  
         <p>I've worked on many projects as a member of a distributed team--working with developers, data scientists, and UX designers from different backgrounds and experiences.  I've selected a few projects that I'm most proud of.</p>
       </div>
+
+      {/* <Route path={`${path}/:projectId`} render={() => <Project />} /> */}
+
     </div>
   )
 }
