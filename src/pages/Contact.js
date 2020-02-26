@@ -23,7 +23,6 @@ const Contact = () => {
         flexDirection: 'column',
         justifyContent: ['center', 'center', 'flex-start'],
         alignItems: 'center',
-        backgroundColor: ['red', 'blue', 'yellow']
       })}
     >
       <NavBar />

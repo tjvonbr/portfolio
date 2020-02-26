@@ -13,10 +13,9 @@ import ProjectData from '../src/data/ProjectData';
 import './App.css';
 
 const App = () => {
+  // Setting the project data to state to pass around as props
   const projectData = ProjectData
-
   const [projects, setProjects] = useState(projectData);
-  console.log('STATE', projects)
 
   return (
     <Router>

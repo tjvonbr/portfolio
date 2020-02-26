@@ -21,7 +21,7 @@ const NavBar = () => {
         display: 'flex',
         position: ['absolute', 'absolute', 'relative'],
         top: ['0px'],
-        width: ['30%', '40%', '50%'],
+        width: ['20%', '30%', '40%'],
         justifyContent: 'space-around',
         alignItems: 'center',
         justifySelf: 'end',
