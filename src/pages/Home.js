@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { jsx, css } from '@emotion/core';
 
 const linkStyle = css({
-  fontSize: '1.6rem',
+  fontSize: '1.8rem',
   color: 'black',
   textDecoration: 'none',
   padding: '0px',

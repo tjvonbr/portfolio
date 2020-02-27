@@ -4,6 +4,7 @@ import React from 'react';
 import { useRouteMatch } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import NavBarLink from '../components/NavBarLink';
+import ProjectNavBar from '../components/ProjectNavBar';
 import { jsx, css } from '@emotion/core';
 import facepaint from 'facepaint';
 
@@ -17,9 +18,7 @@ const mq = facepaint([
 // Font size for subnavigation
 const fontSize = '1.6rem'
 
-const Projects = props  => {
-  const { path, url } = useRouteMatch();
-
+const Projects = () => {
   return (
     <div
       css={mq({
@@ -33,42 +32,6 @@ const Projects = props  => {
     >
       <NavBar />
 
-      <nav
-        css={mq({
-          display: 'flex',
-          position: ['absolute', 'absolute', 'relative'],
-          top: ['40px'],
-          width: ['20%', '40%', '50%'],
-          justifyContent: 'space-around',
-          alignItems: 'flex-start',
-          margin: '0px auto',
-          height: '50px',
-
-        })}
-      >
-
-        <NavBarLink 
-          {...props}
-          path={`${url}/comake`}
-          page="Co-Make" 
-          fontSize={fontSize} 
-        />
-
-        <NavBarLink 
-          {...props}
-          path={`${url}/wanderlust`}
-          page="Wanderlust" 
-          fontSize={fontSize} 
-        />
- 
-        <NavBarLink 
-          {...props}
-          path={`${url}/splitthebill`}
-          page="Split the Bill" 
-          fontSize={fontSize} 
-        />
-      </nav>
-
       <div
         css={mq({
           width: ['50%', '50%', '92%'],
@@ -77,8 +40,11 @@ const Projects = props  => {
           justifyContent: 'center',
         })}
       >
+        <p style={{fontSize: '2.4rem', fontWeight: 'bold'}}>Check out my work!</p>
   
         <p>I've worked on many projects as a member of a distributed team--working with developers, data scientists, and UX designers from different backgrounds and experiences.  I've selected a few projects that I'm most proud of.</p>
+
+        <ProjectNavBar />
       </div>
 
     </div>

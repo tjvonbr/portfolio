@@ -1,8 +1,8 @@
 /** @jsx jsx **/
 
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { jsx } from '@emotion/core';
+import CompleteNavigation from '../components/CompleteNavigation'
 import facepaint from 'facepaint';
 
 // Media queries
@@ -12,13 +12,57 @@ const mq = facepaint([
   '@media(max-width: 768px)'
 ])
 
-const Project = ({projects, match}) => {
-  //
-  const project = projects.find(({ id }) => id === match.params.projectId)
+// Font size for subnavigation to pass as props
+const fontSize = '1.6rem'
+
+const Project = (props) => {
+  console.log(props)
 
   return (
-    <div>
-      <p>{ project.id }</p>
+    <div
+      css={mq({
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: ['center', 'center', 'flex-start'],
+        alignItems: 'center',
+      })}
+    >
+
+      <CompleteNavigation />
+
+      {/*Container serving as the project card */}
+      <div
+        css={mq({
+          width: ['45%', '70%', '90%']
+        })}
+      >
+        <h3 css={{marginBottom: '0px'}}>{ props.title }</h3>
+
+        <p css={{margin: '0px'}}>{ props.date }</p>
+
+        <p><strong>Summary:</strong> { props.summary }</p>
+
+        <p><strong>Role:</strong> { props.role }</p>
+
+        <p css={{marginBottom: '0px'}}><strong>Highlights:</strong></p>
+
+          {props.highlights.map(highlight => (
+           <li>{highlight}</li>
+          ))}
+          
+        <p>
+          <a 
+            href={`${props.link}`} 
+            target="_blank"
+            css={{
+              color: 'black'
+            }}
+          >See the code</a>
+        </p>
+
+      </div>
     </div>
   )
 }

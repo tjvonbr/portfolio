@@ -25,7 +25,7 @@ const App = () => {
         <Route exact path="/projects" component={Projects} />
         <Route path="/contact" component={Contact} />
         <Route path="/projects/:projectId" render={
-          props => <Project {...props} projects={projects}  />}
+          props => <Project {...props} {...projects.find(project => project.id === props.match.params.projectId)} />}
         />
       </Switch>
     </Router>
