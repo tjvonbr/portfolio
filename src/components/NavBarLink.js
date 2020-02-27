@@ -9,13 +9,15 @@ const NavBarLink = props => {
     <NavLink to={props.path} 
       css={{
         fontSize: `${props.fontSize}`,
+        borderRight: `${props.borderRight}`,
+        borderLeft: `${props.borderLeft}`,
         color: 'black',
         textDecoration: 'none',
-        padding: '0px',
-        margin: '10px 10px',
+        padding: `${props.padding}`,
+        margin: `${props.margin}`,
         '&:hover': {
           textDecoration: 'underline',
-        }
+        },
       }}
       activeStyle={{
         fontWeight: '800'
