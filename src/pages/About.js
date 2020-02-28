@@ -40,6 +40,10 @@ const About = () => {
 
         <p>I am a Chicago-based full-stack engineer with a background in education and software development.  After teaching high school history for five years, I wanted to approach education from a different angle and decided to pursue studying web development full-time.  Because of my experience in the classroom, I understand how valuable educational technology is in an increasingly digital world, and I’m ready to start working on a project that is going to transform the educational experience for students around the world.</p>
 
+        <p>If your next project utilizes any of the following technologies, and want my help building it, please make sure to visit my Contact page!</p>
+
+        <p><em>Technical skills: </em>JavaScript, HTML, CSS, React, Redux, React Native, Node, Express, Python, Django & SQL</p>
+
       </div>
     </div>
   )
