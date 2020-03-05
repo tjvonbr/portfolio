@@ -16,8 +16,6 @@ const mq = facepaint([
 const fontSize = '1.6rem'
 
 const Project = (props) => {
-  console.log(props)
-
   return (
     <div
       css={mq({
@@ -38,7 +36,17 @@ const Project = (props) => {
           width: ['45%', '70%', '90%']
         })}
       >
-        <h3 css={{marginBottom: '0px'}}>{ props.title }</h3>
+        <a  
+          href={props.deployed}
+          target="_blank"
+          css={{
+            fontSize: '2.4rem',
+            marginBottom: '0px',
+            color: 'black'
+          }}  
+        >
+        {props.title}
+        </a>
 
         <p css={{margin: '0px'}}>{ props.date }</p>
 
@@ -51,10 +59,10 @@ const Project = (props) => {
           {props.highlights.map(highlight => (
            <li>{highlight}</li>
           ))}
-          
+        
         <p>
           <a 
-            href={`${props.link}`} 
+            href={props.link}
             target="_blank"
             css={{
               color: 'black'
