@@ -9,7 +9,8 @@ export default [
      "Worked with a UX design team and built a responsive UI with React according to UX specifications",
      "Delivered features such as creating community concerns, upvoting of previously posted concerns, and ability to leave comments"
     ],
-    link: "https://github.com/build-week-co-make/Front-end"
+    link: "https://github.com/tjvonbr/personal_comake_fe",
+    deployed: "https://comake-fe.herokuapp.com/"
   },
 
   {
@@ -23,7 +24,8 @@ export default [
       "Offers features such as adding vacations to a ‘favorites’ list and leaving reviews of vacations that the user has personally experienced",
       "Streamlined state management using Redux"
     ],
-    link: "https://github.com/bw-wanderlust/wanderlust-frontend"
+    link: "https://github.com/tjvonbr/personal_wanderlust_fe",
+    deployed: "https://wanderlust-endorsement.herokuapp.com/"
   },
 
   {
@@ -36,6 +38,7 @@ export default [
       "Pair-programmed a RESTful API to facilitate data transfer between server and client",
       "Implemented security measures including JSON web tokens and user session technologies to ensure client protection"
     ],
-    link: "https://github.com/tjvonbr/personal_split_the_bill"
+    link: "https://github.com/tjvonbr/personal_split_the_bill_fe",
+    deployed: "https://split-the-bill-fe.herokuapp.com/"
   }
 ]
